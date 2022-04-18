@@ -12,7 +12,7 @@ class UsersPieChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 5),
       height: MediaQuery.of(context).size.height / 2.6,
       width: MediaQuery.of(context).size.width / 2.44,
       child: Card(

@@ -29,6 +29,7 @@ class DashboardScreen extends StatelessWidget {
           ChatsAnalysisChart(data: BarChartCData.data),
           const StatusLineChart(),
           Row(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const [
               UsersActivityPieChart(),

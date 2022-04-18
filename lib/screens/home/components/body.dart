@@ -17,6 +17,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView(
+      physics: const NeverScrollableScrollPhysics(),
       controller: pageController,
       children: [
         DashboardScreen(),
