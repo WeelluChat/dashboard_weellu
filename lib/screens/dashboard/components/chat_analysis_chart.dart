@@ -1,0 +1,50 @@
+
+import 'package:flutter/material.dart';
+
+import '../../../config/constants.dart';
+import '../../../models/chats_series.dart';
+import 'chats_bar_chart.dart';
+
+class ChatsAnalysisChart extends StatelessWidget {
+  const ChatsAnalysisChart({
+    Key key,
+    @required this.data,
+  }) : super(key: key);
+
+  final List<ChatsSeries> data;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+      height: MediaQuery.of(context).size.height / 2.6,
+      width: MediaQuery.of(context).size.width,
+      child: Card(
+        color: secondaryColor,
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: [
+              const Text('Chat Analysis',
+                  style: TextStyle(
+                    fontSize: 25,
+                  )),
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(bottom: 10, left: 15),
+                  decoration: BoxDecoration(
+                    color: bgColor.withOpacity(.4),
+                  ),
+                  height: 300,
+                  width: MediaQuery.of(context).size.width / 1.8,
+                  child: ChartsChart(data: data),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
