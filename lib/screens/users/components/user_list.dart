@@ -1,5 +1,4 @@
 import 'package:dashboard/config/constants.dart';
-import 'package:dashboard/screens/user_profile/user_profile.dart';
 import 'package:flutter/material.dart';
 
 class UserList extends StatefulWidget {

@@ -5,7 +5,7 @@ import 'package:dashboard/widgets/baseboard.dart';
 import 'package:dashboard/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
 
-import 'components/card_builder.dart';
+import 'components/overview_card_builder.dart';
 import 'components/chat_analysis_chart.dart';
 import 'components/users_activity_pie_chart.dart';
 
@@ -19,7 +19,7 @@ class DashboardScreen extends StatelessWidget {
           const CustomTitle(
             title: 'Dashboard',
           ),
-          CardBuilder(),
+          OverviewCardBuilder(),
           // Center(
           //   child: Container(
           //     margin: const EdgeInsets.only(bottom: 30),

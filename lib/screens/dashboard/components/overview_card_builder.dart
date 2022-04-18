@@ -1,17 +1,18 @@
-import 'package:dashboard/models/info_card_model.dart';
+import 'package:dashboard/config/constants.dart';
+import 'package:dashboard/models/overview_info_card_model.dart';
 import 'package:flutter/material.dart';
 
 import 'info_card.dart';
 
-class CardBuilder extends StatefulWidget {
-  CardBuilder({Key key}) : super(key: key);
-  final InfoModel infoModel = InfoModel();
+class OverviewCardBuilder extends StatefulWidget {
+  OverviewCardBuilder({Key key}) : super(key: key);
+  final OverviewInfoModel overviewInfoModel = OverviewInfoModel();
 
   @override
-  State<CardBuilder> createState() => _CardBuilderState();
+  State<OverviewCardBuilder> createState() => _OverviewCardBuilderState();
 }
 
-class _CardBuilderState extends State<CardBuilder> {
+class _OverviewCardBuilderState extends State<OverviewCardBuilder> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -23,6 +24,7 @@ class _CardBuilderState extends State<CardBuilder> {
       itemCount: infoData.length,
       itemBuilder: (context, index) {
         return InfoCard(
+          bodyColor: secondaryColor,
           arrowIcon: infoDatas[index].arrowIcon,
           arrowIconColor: infoDatas[index].arrowIconColor,
           percentage: infoDatas[index].percentage,

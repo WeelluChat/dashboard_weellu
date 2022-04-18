@@ -4,7 +4,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 
 import '../config/constants.dart';
 
-class InfoModel {
+class OverviewInfoModel {
   IconData arrowIcon;
   Color arrowIconColor;
   int percentage;
@@ -18,7 +18,7 @@ class InfoModel {
   List<Color> colors;
   List<FlSpot> spots;
 
-  InfoModel({
+  OverviewInfoModel({
     this.arrowIcon,
     this.arrowIconColor,
     this.percentage,
@@ -33,7 +33,7 @@ class InfoModel {
     this.spots,
   });
 
-  InfoModel.fromJson(Map<String, dynamic> json) {
+  OverviewInfoModel.fromJson(Map<String, dynamic> json) {
     arrowIcon = json['arrowIcon'];
     arrowIconColor = json['arrowIconColor'];
     percentage = json['percentage'];
@@ -66,8 +66,8 @@ class InfoModel {
   }
 }
 
-List<InfoModel> infoDatas =
-    infoData.map((item) => InfoModel.fromJson(item)).toList();
+List<OverviewInfoModel> infoDatas =
+    infoData.map((item) => OverviewInfoModel.fromJson(item)).toList();
 
 //List<FlSpot> spots = yValues.asMap().entries.map((e) {
 //  return FlSpot(e.key.toDouble(), e.value);

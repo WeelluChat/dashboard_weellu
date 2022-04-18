@@ -4,8 +4,8 @@ import 'package:dashboard/screens/dashboard/components/progress_line.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-
 class InfoCard extends StatelessWidget {
+  final Color bodyColor;
   final int percentage;
   final IconData arrowIcon;
   final Color arrowIconColor;
@@ -29,6 +29,7 @@ class InfoCard extends StatelessWidget {
     this.percentage,
     this.spots,
     this.colors,
+    this.bodyColor,
   }) : super(key: key);
 
   @override
@@ -36,7 +37,7 @@ class InfoCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: bodyColor,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Column(
@@ -128,8 +129,8 @@ class InfoCard extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(left: 15, right: 15),
             child: ProgressLine(
-             color: color,
-             percentage: percentage,
+              color: color,
+              percentage: percentage,
             ),
           )
         ],
