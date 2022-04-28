@@ -25,7 +25,7 @@ class SideBar extends StatelessWidget {
                   child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: defaultPadding * 2,
                   ),
                   Image.asset(
@@ -34,10 +34,10 @@ class SideBar extends StatelessWidget {
                     height: 55,
                     width: 55,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: defaultPadding,
                   ),
-                  Text(
+                  const Text(
                     "Weellu",
                     style: TextStyle(fontSize: 25),
                   )
@@ -107,6 +107,11 @@ class SideBar extends StatelessWidget {
                 },
               ),
               DrawerListTile(
+                title: "Landing Page",
+                icon: Icons.padding_outlined,
+                press: () {},
+              ),
+              DrawerListTile(
                 title: "App Update",
                 icon: Icons.system_update,
                 press: () {
@@ -174,7 +179,7 @@ class DrawerListTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: TextStyle(color: Colors.white54, fontSize: 18),
+        style: const TextStyle(color: Colors.white54, fontSize: 18),
       ),
     );
   }

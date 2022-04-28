@@ -1,6 +1,5 @@
 import 'package:dashboard/screens/calls/calls_screen.dart';
 import 'package:dashboard/screens/surveys/surveys_screen.dart';
-import 'package:dashboard/screens/user_profile/components/user_profile.dart';
 import 'package:dashboard/screens/user_profile/user_profile_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +21,7 @@ class Body extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       controller: pageController,
       children: [
-        UserProfileScreen(),
+        const UserProfileScreen(),
         DashboardScreen(),
         const UsersScreen(),
         const UserGroupsScreen(),
