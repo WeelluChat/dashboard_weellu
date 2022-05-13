@@ -100,16 +100,11 @@ class SideBar extends StatelessWidget {
                 },
               ),
               DrawerListTile(
-                title: "Site Settings",
+                title: "Landing Page",
                 icon: Icons.settings_outlined,
                 press: () {
                   pageController.jumpToPage(8);
                 },
-              ),
-              DrawerListTile(
-                title: "Landing Page",
-                icon: Icons.padding_outlined,
-                press: () {},
               ),
               DrawerListTile(
                 title: "App Update",
